@@ -17,7 +17,7 @@ export class catService {
     getRandomCats() {
         const endpoint = `${this.url}/images/search`;
         const params = new HttpParams()
-            .set('limit', 10)
+            .set('limit', 20)
             .set('has_breeds', 1);
         const options = { params, headers: this.headers }
         return this.httpClient.get(endpoint, options);

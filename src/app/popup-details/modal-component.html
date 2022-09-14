@@ -6,7 +6,15 @@
     <h4>description</h4>
     <p>{{catData.breedDescription}}</p>
     <h4>Energy level</h4>
-    <ngb-progressbar type="warning" [value]="75"></ngb-progressbar>
+    <div [ngSwitch]=catData.breedEnergy>
+        <ngb-progressbar *ngSwitchCase="0" type="danger" [value]=0></ngb-progressbar>
+        <ngb-progressbar *ngSwitchCase="1" type="danger" [value]=20></ngb-progressbar>
+        <ngb-progressbar *ngSwitchCase="2" type="warning" [value]=40></ngb-progressbar>
+        <ngb-progressbar *ngSwitchCase="3" type="warning" [value]=60></ngb-progressbar>
+        <ngb-progressbar *ngSwitchCase="4" type="success" [value]=80></ngb-progressbar>
+        <ngb-progressbar *ngSwitchCase="5" type="success" [value]=100></ngb-progressbar>
+    </div>
+
 
 </div>
 <div class="modal-footer">

@@ -10,6 +10,7 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class PopupDetailsComponent {
   @Input() name: any;
   @Input() catData: any;
+  test: number = 20;
   constructor(public activeModal: NgbActiveModal) { }
 }
 
@@ -19,7 +20,7 @@ export class NgbdModalComponent {
   @Input() content: any;
   @Input() breedName: any;
   @Input() breedDescription: any;
-  @Input() wikipedia_url: any;
+  @Input() breedEnergy: any;
 
   constructor(private modalService: NgbModal) { }
 
