@@ -6,16 +6,17 @@
 
 <div>
 
-  <div class="row">
+  <div class="row" style="margin:0;padding:0">
     <div class="col-12 col-lg-10 ">
       <div *ngIf="!posts" style="display:flex ; justify-content:center">
         <img src="https://cdn.dribbble.com/users/2882885/screenshots/7861928/media/a4c4da396c3da907e7ed9dd0b55e5031.gif"
           alt="" style="width:300px">
       </div>
       <div *ngIf="posts">
-        <div class="row">
+        <div class="row" style="margin:0;padding:0">
           <div *ngFor="let user of posts; index as i" class="col-12 col-md-6 col-lg-4">
-            <div class="card" style="background-color: rgb(235, 235, 235);height: 600px; width: 100%">
+            <div class="card"
+              style="background-color: rgb(235, 235, 235);height: 600px; width: 100%;margin-bottom: 20px;">
               <figure style=" height:300px">
                 <img src={{posts[i].url}} alt="" style="object-fit:cover;width: 100%;height: 300px;">
               </figure>
