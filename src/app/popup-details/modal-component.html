@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h4 class="modal-title">{{catData.breedName}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<div class="modal-body">
+    <h4>description</h4>
+    <p>{{catData.breedDescription}}</p>
+    <h4>Energy level</h4>
+    <ngb-progressbar type="warning" [value]="75"></ngb-progressbar>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>
