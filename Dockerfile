@@ -1,11 +1,11 @@
 FROM node
 
-COPY ./ ./
+WORKDIR /app
 
-RUN npm install -g @angular/cli
+COPY . .
 
-RUN npm start
+RUN npm install
 
 EXPOSE 4200
 
-#CMD ["npm", "start"]
+CMD ["npm", "start"]
