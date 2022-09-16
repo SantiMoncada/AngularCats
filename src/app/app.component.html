@@ -47,8 +47,8 @@
       <div *ngIf="breeds">
         <ul class="list-group list-group-light">
           <li *ngFor="let user of breeds; index as i" class="list-group-item">
-            <ngbd-modal-component content={{breeds[i].name}} breedEnergy={{breeds[i].energy_level}}
-              breedName={{breeds[i].name}} breedDescription={{breeds[i].description}}>
+            <ngbd-modal-component content={{user.name}} breedEnergy={{user.energy_level}} breedName={{user.name}}
+              breedDescription={{user.description}}>
             </ngbd-modal-component>
           </li>
         </ul>
